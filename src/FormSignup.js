@@ -2,6 +2,7 @@
 import React from 'react';
 import validate from './validateInfo';
 import useForm from './useForm';
+import {select,MenuItem} from '@material-ui/core';
 import './Form.css';
 
 const FormSignup = ({ submitForm }) => {
@@ -13,57 +14,28 @@ const FormSignup = ({ submitForm }) => {
   return (
     <div className='form-content-right'>
       <form onSubmit={handleSubmit} className='form' noValidate>
-        <h1> JOIN OUR ZD FAMILY</h1>
-        <div className='form-inputs'>
-          
-          <input
-            className='form-input'
-            type='text'
-            name='username'
-            placeholder='username'
-            value={values.username}
-            onChange={handleChange}
-          />
-          {errors.username && <p>{errors.username}</p>}
-        </div>
-        <div className='form-inputs'>
-         
-          <input
-            className='form-input'
-            type='email'
-            name='email'
-            placeholder='email'
-            value={values.email}
-            onChange={handleChange}
-          />
-          {errors.email && <p>{errors.email}</p>}
-        </div>
-        <div className='form-inputs'>
-      
-          <input
-            className='form-input'
-            type='password'
-            name='password'
-            placeholder='password'
-            value={values.password}
-            onChange={handleChange}
-          />
-          {errors.password && <p>{errors.password}</p>}
-        </div>
-        <div className='form-inputs'>
-        
-          <input
-            className='form-input'
-            type='password'
-            name='password2'
-            placeholder='Confirm password'
-            value={values.password2}
-            onChange={handleChange}
-          />
-          {errors.password2 && <p>{errors.password2}</p>}
-        </div>
+        <h1> CHOOSE YOUR ZILLION FAMILY NAME</h1>
+              <select value="unborn egg">
+              <h1 className="dropdown-login">unborn egg</h1>
+
+        <MenuItem value={1} >Neonate Achiever</MenuItem>
+        <MenuItem value={1} >Tenderfoot Activist</MenuItem>
+        <MenuItem value={1} >Human Dynamo</MenuItem>
+        <MenuItem value={1} >Stardom Dreamer</MenuItem>
+        <MenuItem value={1} >I'm Tireless Seeker</MenuItem>
+        <MenuItem value={1} >Brobdingnagian Engine</MenuItem>
+        <MenuItem value={1} >Zillionaire</MenuItem>
+        <MenuItem value={1} >Human Dynamo</MenuItem>
+
+      </select>
+        <p>GENDER</p>
+         <input type="radio" name="gender" value="male"/>
+        <label>Male </label>
+        <input type="radio" name="gender" value="male"/>
+        <label>Female </label>
+        <p>EMAIL ADDRESS/PHONE NUMBER</p>
         <button className='form-input-btn' type='submit'>
-          Login
+          update
         </button>
       </form>
     </div>
